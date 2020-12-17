@@ -1,0 +1,32 @@
+type Query {
+  getPersons: [Person]
+  getPerson(id: String!): Person
+}
+
+type Mutation {
+  createPerson(
+    name: String!
+    email: String!
+    age: String!
+    address: String!
+    phone: String!
+  ): Person
+  updatePerson(
+    id: String!
+    name: String!
+    email: String!
+    age: String!
+    address: String!
+    phone: String!
+  ): Person
+  deletePerson(id: String!): Person
+}
+
+type Person {
+  id: String!
+  name: String
+  email: String
+  age: String
+  address: String
+  phone: String
+}
